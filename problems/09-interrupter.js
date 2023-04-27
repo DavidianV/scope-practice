@@ -18,6 +18,20 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 // Your code here
 
+const interrupter = (word) => {
+
+  return function(word2) {
+    let split = word2.split(' ')
+    for (i = 1; i < split.length; i += 2) {
+      split.splice(i, 0, word)
+    }
+    return split.join(' ');
+  }
+}
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

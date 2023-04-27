@@ -15,6 +15,21 @@ function returned by recVolume should continue to return the original volume.
 
 // Your code here
 
+const recVolume = (height) => {
+  let vol = height;
+  let count = 2;
+
+  const rec = (width) => {
+    if (count > 0) {
+      vol *= width;
+      count--;
+      return rec;
+    }
+  else return vol;
+  }
+}
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

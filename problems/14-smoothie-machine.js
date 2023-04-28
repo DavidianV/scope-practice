@@ -22,7 +22,14 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here
+const smoothieMachine = (...params) => {
+  let smooth = "I'm having a smoothie with "
+  let newArr = params;
+  return function (...ings) {
+    newArr = newArr.concat(ings);
+    return smooth + newArr.join(' and ')
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

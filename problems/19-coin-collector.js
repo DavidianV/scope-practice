@@ -25,7 +25,19 @@ Example 3:
 
 ***********************************************************************/
 
-// Your code here
+const coinCollector = (numCoins) => {
+  let n = numCoins
+  let numArr = []
+  const coin = (num) => {
+    numArr.push(num);
+    n--
+    if (n === 0) {
+      return numArr
+    }
+    return coin
+  }
+  return coin;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
